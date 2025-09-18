@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Y6W-OH-hqX" customClass="MainViewController" customModule="NumbersTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jda-36-FPP">
+                                <rect key="frame" x="24" y="126" width="345" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-pY-LcS">
+                                <rect key="frame" x="24" y="176" width="74" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="I97-bp-9P7"/>
+                                    <constraint firstAttribute="width" constant="74" id="llN-qR-Fwk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get fact">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getFactButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ssG-9u-8Dz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3K-mQ-Jkk">
+                                <rect key="frame" x="141" y="176" width="228" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="DD6-Qc-T0Y"/>
+                                    <constraint firstAttribute="width" constant="228" id="omH-dm-1LC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get fact about random number">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getRandomNumberButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b63-65-8AN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-7h-JHX">
+                                <rect key="frame" x="168.33333333333334" y="258" width="56.666666666666657" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-Zl-4FO">
+                                <rect key="frame" x="0.0" y="278.33333333333326" width="393" height="505.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="UbH-9R-BgT"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="OoD-PE-l6t"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="Ztq-Cn-JfL">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jda-36-FPP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="0mc-3l-Gop"/>
+                            <constraint firstItem="G3K-mQ-Jkk" firstAttribute="trailing" secondItem="jda-36-FPP" secondAttribute="trailing" id="3bo-q0-n3r"/>
+                            <constraint firstItem="keZ-7h-JHX" firstAttribute="centerX" secondItem="jda-36-FPP" secondAttribute="centerX" id="JwE-nW-NsE"/>
+                            <constraint firstItem="T9d-pY-LcS" firstAttribute="leading" secondItem="jda-36-FPP" secondAttribute="leading" id="MnU-Q0-0F4"/>
+                            <constraint firstItem="9jU-Zl-4FO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NO0-TX-QRR"/>
+                            <constraint firstItem="keZ-7h-JHX" firstAttribute="top" secondItem="G3K-mQ-Jkk" secondAttribute="bottom" constant="40" id="PYY-qB-1wy"/>
+                            <constraint firstItem="T9d-pY-LcS" firstAttribute="top" secondItem="jda-36-FPP" secondAttribute="bottom" constant="16" id="Sog-rh-Y2J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9jU-Zl-4FO" secondAttribute="trailing" id="eo2-Wq-eUj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9jU-Zl-4FO" secondAttribute="bottom" id="inb-Le-C95"/>
+                            <constraint firstItem="G3K-mQ-Jkk" firstAttribute="top" secondItem="jda-36-FPP" secondAttribute="bottom" constant="16" id="ncW-6U-1e0"/>
+                            <constraint firstItem="9jU-Zl-4FO" firstAttribute="top" secondItem="keZ-7h-JHX" secondAttribute="bottom" id="nwv-Jd-p4w"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jda-36-FPP" secondAttribute="trailing" constant="24" id="qLH-Ji-Qob"/>
+                            <constraint firstItem="jda-36-FPP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="tEo-nT-HXx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="Ztq-Cn-JfL" id="QXW-GE-PY1"/>
+                        <outlet property="factButton" destination="T9d-pY-LcS" id="eSY-uA-X5q"/>
+                        <outlet property="historyLabel" destination="keZ-7h-JHX" id="axe-20-lfq"/>
+                        <outlet property="numberTextField" destination="jda-36-FPP" id="joa-eF-34n"/>
+                        <outlet property="randomFactNumber" destination="G3K-mQ-Jkk" id="wER-gI-K2d"/>
+                        <outlet property="tableView" destination="9jU-Zl-4FO" id="EdW-Mx-f5n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="-346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
