@@ -22,11 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        return true
+        true
     }
 
     // Provide convenient access to the context
     static var shared: AppDelegate {
-        return UIApplication.shared.delegate as! AppDelegate
+        UIApplication.shared.delegate as! AppDelegate
     }
 }
