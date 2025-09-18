@@ -120,9 +120,10 @@ extension MainViewController: UITableViewDelegate {
         }
         tableView.deselectRow(at: indexPath, animated: true)
         let item = viewModel.item(at: indexPath.row)
-        // TODO: - Add detail controller here
-        let detail = UIViewController()
-        navigationController?.pushViewController(detail, animated: true)
+        let storyboard = UIStoryboard(name: "DetailsViewController", bundle: nil)
+        guard let details = storyboard.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController else { return }
+        details.configure(with: item.numberText, fact: item.factText)
+        navigationController?.pushViewController(details, animated: true)
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
