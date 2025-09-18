@@ -25,9 +25,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we2-uz-4B6">
                                 <rect key="frame" x="126.66666666666669" y="198" width="140" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL9-K6-fqq">
-                                        <rect key="frame" x="62" y="51" width="14.666666666666666" height="38.333333333333336"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL9-K6-fqq">
+                                        <rect key="frame" x="7.9999999999999858" y="0.0" width="124.00000000000001" height="140"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
@@ -41,18 +40,24 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.75294117647058822" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="Bdz-hW-1xa"/>
-                                    <constraint firstAttribute="height" constant="140" id="Ui2-y6-Cjz"/>
+                                    <constraint firstAttribute="trailing" secondItem="mL9-K6-fqq" secondAttribute="trailing" constant="8" id="5Xd-0g-Rs0"/>
+                                    <constraint firstAttribute="bottom" secondItem="mL9-K6-fqq" secondAttribute="bottom" id="BBX-5q-G1M"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Bdz-hW-1xa"/>
+                                    <constraint firstItem="mL9-K6-fqq" firstAttribute="top" secondItem="we2-uz-4B6" secondAttribute="top" id="Lmg-Nh-3Za"/>
+                                    <constraint firstItem="mL9-K6-fqq" firstAttribute="leading" secondItem="we2-uz-4B6" secondAttribute="leading" constant="8" id="a5v-tF-0ug"/>
+                                    <constraint firstAttribute="width" secondItem="we2-uz-4B6" secondAttribute="height" multiplier="1:1" id="kQ9-yk-o6f"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="we2-uz-4B6" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" priority="1" constant="24" id="Ku1-9r-BgQ"/>
                             <constraint firstItem="lhy-xF-Gs0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Kzr-it-yBB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lhy-xF-Gs0" secondAttribute="trailing" constant="24" id="M3z-Ny-WuI"/>
                             <constraint firstItem="we2-uz-4B6" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RxW-x9-gto"/>
                             <constraint firstItem="lhy-xF-Gs0" firstAttribute="top" secondItem="we2-uz-4B6" secondAttribute="bottom" constant="40" id="ifQ-SC-497"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="we2-uz-4B6" secondAttribute="trailing" priority="900" constant="24" id="ucq-YE-yVd"/>
                             <constraint firstItem="we2-uz-4B6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="ukj-bG-Ize"/>
                         </constraints>
                     </view>
