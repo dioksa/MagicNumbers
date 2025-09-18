@@ -67,3 +67,4 @@ fastlane/test_output
 # Xcode workspace
 *.xcworkspace
 
+.DS_Store
